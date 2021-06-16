@@ -9,14 +9,13 @@ class SL {
     constructor() {
         this.head = null;
     } 
-    contains(value) {
+    length() {
         var runner=this.head;
+        var numNodes = 0;
         while(runner) {
-            if(runner.value === value) {
-                return true;
-            }
+            nodes++;
             runner = runner.next;
         }
-        return false;
+        return numNodes;
     }
 }
