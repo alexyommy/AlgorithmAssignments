@@ -43,3 +43,4 @@ def arrConcat(arr1,arr2):
         newArr.append(arr2[j])
     return newArr
 print(arrConcat(['a','b'], [1,2]))
+
