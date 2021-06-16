@@ -9,14 +9,34 @@ class SL {
     constructor() {
         this.head = null;
     } 
-    contains(value) {
-        var runner=this.head;
+    display() {
+        var output = "";
+        var runner = this.head;
         while(runner) {
-            if(runner.value === value) {
-                return true;
+            output += runner.value + ""
+            runner =runner.next;
+        }
+        return output;
+    }
+}
+
+// OR 
+
+class SL {
+    constructor() {
+        this.head = null;
+    } 
+    display() {
+        var output = "[";
+        var runner = this.head;
+        while(runner) {
+            output += runner.value;
+            if(runner.next) {
+                output +=",";
             }
             runner = runner.next;
         }
-        return false;
+        output += "]"
+        return output;
     }
 }
